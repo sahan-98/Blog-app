@@ -13,7 +13,7 @@ import { alertService } from '../../services/alertService';
 import { postService } from '../../services/postService';
 import axios from "axios";
 
-export default function postCreate(props) {
+export default function PostCreate(props) {
 
     const post = props?.post;
     const router = useRouter();

@@ -6,7 +6,7 @@ import axios from "axios";
 // import { Spinner } from '../components/Spinner';
 import { postService } from '../services/postService';
 
-export default function mainSection() {
+export default function MainSection() {
 
 
     // function deleteUser(id) {

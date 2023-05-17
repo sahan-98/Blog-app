@@ -10,7 +10,7 @@ import * as Yup from 'yup';
 import { alertService } from '../../services/alertService';
 import { userService } from '../../services/userServices';
 
-export default function signUp(props){
+export default function SignUp(props){
 
         const user = props?.user;
         const router = useRouter();

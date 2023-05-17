@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { postService } from '../../services/postService';
 import { alertService } from '../../services/alertService';
 
-export default function blogPage() {
+export default function BlogPage() {
 
     const router = useRouter();
     const [posts, setPost] = useState(null);

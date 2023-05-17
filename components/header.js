@@ -1,11 +1,9 @@
-import { ImFacebook, ImTwitter, ImYoutube } from "react-icons/im";
 import Link from "next/link";
-import { useState } from "react";
 import { userService } from "@/services/userServices";
 import { useRouter } from 'next/router'
 
 
-export default function header() {
+export default function Header() {
   const router = useRouter()
   return (
     <header className="bg-gray-50">

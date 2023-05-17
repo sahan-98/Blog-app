@@ -10,7 +10,7 @@ import * as Yup from 'yup';
 
 
 
-export default function login(){
+export default function Login(){
 
     const router = useRouter();
 

@@ -1,6 +1,7 @@
 import Format from "../../../layout/format"
 import Image from "next/image"
 import Link from "next/link"
+import {useRouter} from "next/router";
 
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -9,13 +10,14 @@ import { useParams } from "react-router-dom";
 export default function postUpdate(){
 
 
-    const { id } = useParams();
+    const  id  = useParams();
+    const router = useRouter();
     
     const [title, setTopic] = useState("");
     const [content, setBody] = useState("");
 
     useEffect(() => {
-        fetch(`http://localhost:4000/api/v1/posts/${id}`, {
+        fetch(`http://localhost:4000/api/v1/posts/${router.query.id}`, {
             method: "GET",
             // headers: {
             //     "Authorization": "Bearer " + localStorage.getItem("jwt")
@@ -66,7 +68,7 @@ export default function postUpdate(){
                         <label htmlFor="content" className="block font-bold text-gray-700">
                             Content
                         </label>
-                        <input
+                        <textarea
                             id="content"
                             type="content"
                             className="w-full px-4 py-3 mt-1 border-gray-300 rounded-md focus:border-indigo-500 focus:ring focus:ring-indigo-200"

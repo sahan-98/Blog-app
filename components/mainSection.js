@@ -67,7 +67,7 @@ function Post() {
 
     return (
         <>{posts && posts.map(post =>
-            <div className="item">
+            <div key={post._id} className="item">
                 <div className="image">
                     <Link href={`/posts/${post._id}`}>
                         <img className="w-[400px] h-[300px] object-cover bg-cover rounded-md" src={post.postImg} />
@@ -85,12 +85,12 @@ function Post() {
                         {post.content}
                     </p>
                     {post.postedBy.map((subObj) => (
-                        <a className="text-md font-bold text-gray-600">
+                        <a key={subObj.name} className="text-md font-bold text-gray-600">
                             {subObj.name}
                         </a>
                     ))}
                     {post.postedBy.map((subObj) => (
-                        <a className="text-sm text-gray-500">{subObj.username}</a>
+                        <a key={subObj.username} className="text-sm text-gray-500">{subObj.username}</a>
                     ))}
                 </div>
             </div>

@@ -68,13 +68,13 @@ export default function BlogPage() {
                 <section className="container mx-auto md:px-2 py-16 w-1/2">
                     <div className="flex justify-center">
                         {posts.postedBy.map((subObj) => (
-                            <a className="text-md font-bold text-gray-600">
+                            <a key={subObj.name} className="text-md font-bold text-gray-600">
                                 {subObj.name}
                             </a>
                         ))}
                     </div>
                     {posts.postedBy.map((subObj) => (
-                        <a className="text-sm text-gray-500 flex justify-center"> {subObj.username}</a>
+                        <a key={subObj.username} className="text-sm text-gray-500 flex justify-center"> {subObj.username}</a>
                     ))}
 
                     <div className="post py-10">
